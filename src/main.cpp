@@ -13,7 +13,7 @@ void ISR_BP() {
   precedenteIT = _millis;
 }
 
-void setup() {
+void setup() { 
   Serial.begin(9600);
   pinMode(PIN_BP, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(PIN_BP), ISR_BP, FALLING);
