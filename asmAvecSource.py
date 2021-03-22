@@ -15,7 +15,6 @@ env.AddCustomTarget(
 def asmAvecSourceCB(source, target, env):
     print("Dump firmware.elf ...")
     env.Execute("C:/Users/%username%/.platformio/packages/toolchain-atmelavr/avr/bin/objdump -D -S $BUILD_DIR/${PROGNAME}.elf > $BUILD_DIR/${PROGNAME}.asm")
-    # do some actions
 
 # Ajout d'une fonction de call back a exécuté lorsque le fichier firmware.elf est créé.
 env.AddPostAction("$BUILD_DIR/${PROGNAME}.elf", asmAvecSourceCB)
